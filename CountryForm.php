@@ -6,15 +6,16 @@
   $cDescription = $_POST["description"];
   
   //connect database
-  mysql_connect("ramen.cs.man.ac.uk", "sanchea2", "password")
-    or die('Could not make a connection: '.mysql_error());
-  mysql_select_db("S02_sanchea2") or die('Could not connect to '.
+  mysql_connect("ramen.cs.man.ac.uk", "12_COMP10120_B1", "ztDsBWSMqDny80BR")
+    or die('Could not connect: ' . mysql_error());
+  mysql_select_db("12_COMP10120_B1", $connection)
+    or die('Could not select database');or die('Could not connect to '.
                                           'the database: '.mysql_error());
   
   if (countryIsNew($cName))
   {
-    mysql_query("INSERT INTO countries??? (CountryName, Description)??? 
-                 VALUES ('$cName', 'cDescription')");
+    mysql_query("INSERT INTO Countries (Country Name, Description)
+                 VALUES ('$cName', '$cDescription')");
   }//if
   
   
@@ -24,7 +25,7 @@
   function countryIsNew($country)
   {
     //fetch list of countries
-    $allCountries = mysql_query("SELECT countryName?? FROM countries?")
+    $allCountries = mysql_query("SELECT Country Name FROM Countries")
                       or die('Problem getting country list: '.mysql_error());
     //browse that list until entry found
     while ($oldCountry = mysql_fetch_field($allCountries))
