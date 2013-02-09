@@ -1,9 +1,15 @@
-//Needs an html form that post name and description of the country
+//Needs an html form that post city id and place name, description, and the diferent boolean values
 <?php
   
-  //get name and description
-  $cName = $_POST["name"];
-  $cDescription = $_POST["description"];
+  //get the things above
+  $cityID = $_POST["cityID"];
+  $pName = $_POST["name"];
+  $pDescription = $_POST["description"];
+  $sightseeing = $_POST["sightseeing"];
+  $nightlife = $_POST["nightlife"];
+  $family = $_POST["family"];
+  $sports = $_POST["sports"];
+  $natural = $_POST["natural"];
   
   //connect database
   mysql_connect("ramen.cs.man.ac.uk", "12_COMP10120_B1", "ztDsBWSMqDny80BR")
@@ -12,29 +18,31 @@
     or die('Could not select database');or die('Could not connect to '.
                                           'the database: '.mysql_error());
   
-  if (countryIsNew($cName))
+  if (placeIsNew($pName))
   {
-    mysql_query("INSERT INTO Countries (Country Name, Description)
-                 VALUES ('$cName', '$cDescription')");
+    mysql_query("INSERT INTO Places (cityID, Place Name, Description, sightseeing,
+                                     nightlife, family??, sports, natural life??)
+                 VALUES ('$cityID', $pName', '$pDescription', '$sightseeing', '$nightlife'
+                         '$family', '$sports', '$natural')");
   }//if
   
   
 //--------functions-------//
   
-  //Check if a country exits
-  function countryIsNew($country)
+  //Check if a country exits, maybe improved with city id
+  function placeIsNew($place)
   {
-    //fetch list of countries
-    $allCountries = mysql_query("SELECT Country Name FROM Countries")
-                      or die('Problem getting country list: '.mysql_error());
+    //fetch list of places
+    $allPlaces = mysql_query("SELECT Place Name FROM Places")
+                      or die('Problem getting place list: '.mysql_error());
     //browse that list until entry found
-    while ($oldCountry = mysql_fetch_field($allCountries))
+    while ($oldPlace = mysql_fetch_field($allPlace))
     {
-      if ($country = $oldCountry)
+      if ($place = $oldPlace)
       {return false;}
     }//while
     
     //if it has reach this point, no entry has been found
     return true;
-  }//countryIsNew
+  }//placeIsNew
 ?>
