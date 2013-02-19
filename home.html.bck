@@ -64,6 +64,7 @@ Password: <input type="password" name="password">
 
 </td>
 <td>
+<div id="container">
 <img class="first" src="/home/S12/paks2/anyplace/photo1.jpg" alt=""
      hieght="250" width="304">
 <img border="0" src="/home/S12/paks2/anyplace/photo2.jpg" alt=""
@@ -71,7 +72,8 @@ Password: <input type="password" name="password">
 <img border="0" src="/home/S12/paks2/anyplace/photo3.jpg" alt=""
      hieght="250" width="304">
 <img border="0" src="/home/S12/paks2/anyplace/photo4.jpg" alt=""
-     hieght="250" width="304">      
+     hieght="250" width="304">
+</div>
 
 </td>
 </tr> 
