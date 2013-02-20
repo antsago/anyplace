@@ -1,48 +1,52 @@
-//Needs an html form that post city id and place name, description, and the diferent boolean values
-<?php
-  
-  //get the things above
-  $cityID = $_POST["cityID"];
-  $pName = $_POST["name"];
-  $pDescription = $_POST["description"];
-  $sightseeing = $_POST["sightseeing"];
-  $nightlife = $_POST["nightlife"];
-  $family = $_POST["family"];
-  $sports = $_POST["sports"];
-  $natural = $_POST["natural"];
-  
-  //connect database
-  mysql_connect("ramen.cs.man.ac.uk", "12_COMP10120_B1", "ztDsBWSMqDny80BR")
-    or die('Could not connect: ' . mysql_error());
-  mysql_select_db("12_COMP10120_B1", $connection)
-    or die('Could not select database');or die('Could not connect to '.
-                                          'the database: '.mysql_error());
-  
-  if (placeIsNew($pName))
-  {
-    mysql_query("INSERT INTO Places (cityID, Place Name, Description, sightseeing,
-                                     nightlife, family??, sports, natural life??)
-                 VALUES ('$cityID', $pName', '$pDescription', '$sightseeing', '$nightlife'
-                         '$family', '$sports', '$natural')");
-  }//if
-  
-  
-//--------functions-------//
-  
-  //Check if a country exits, maybe improved with city id
-  function placeIsNew($place)
-  {
-    //fetch list of places
-    $allPlaces = mysql_query("SELECT Place Name FROM Places")
-                      or die('Problem getting place list: '.mysql_error());
-    //browse that list until entry found
-    while ($oldPlace = mysql_fetch_field($allPlace))
-    {
-      if ($place = $oldPlace)
-      {return false;}
-    }//while
-    
-    //if it has reach this point, no entry has been found
-    return true;
-  }//placeIsNew
-?>
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("select#city").attr("disabled","disabled");
+            $("select#country").change(function(){
+            $("select#city").attr("disabled","disabled");
+            $("select#city").html("<option>wait...</option>");
+            var id = $("select#country option:selected").attr('value');
+            $.post("select_city.php", {id:id}, function(data){
+                $("select#city").removeAttr("disabled");
+                $("select#city").html(data);
+            });
+        });
+        $("form#select_form").submit(function(){
+            var country = $("select#country option:selected").attr('value');
+            var city = $("select#city option:selected").attr('value');
+            if(country>0 && city>0)
+            {
+                var result = $("select#city option:selected").html();
+                $("#result").html('your choice: '+result);
+            }
+            else
+            {
+                $("#result").html("you must choose two options!");
+            }
+            return false;
+        });
+    });
+    </script>
+    </head>
+    <body>
+        <?php include "SelectCity.class.php"; ?>
+        <form id="select_form">
+            Choose a Country:<br />
+            <select id="country">
+                <?php echo $opt->ShowCountry(); ?>
+            </select>
+        <br /><br />
+        Choose a City:<br />
+        <select id="city">
+             <option value="0">choose...</option>
+        </select>
+        <br /><br />
+        <input type="submit" value="confirm" />
+        </form>
+        <div id="result"></div>
+    </body>
+</html>
+
