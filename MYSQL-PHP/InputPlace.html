@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>    
+<script>
+$(document).ready(function() {
+	$('select').change(function() {
+		$.ajax({
+		   url: 'http://soba.cs.man.ac.uk/~sanchea2/something.php?selection=',
+		   success: function (response) {
+		     $('#test').html(response);
+		   }
+		});
+	});
+});
+
+</script>
+</head>
+<body>
+
+<h3>Start typing a name in the input field below:</h3>
+<form action=""> 
+ <select id="txt1" onchange="showHint(this.value)">
+  <option value="v">Volvo</option>
+  <option value="s">Saab</option>
+  <option value="ms">Mercedes</option>
+  <option value="a">Audi</option>
+</select>
+</form>
+<div id="test"></div>
+<p>Suggestions: <span id="txtHint"></span></p> 
+
+</body>
+</html>
+
