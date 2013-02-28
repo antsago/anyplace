@@ -10,8 +10,9 @@
 @nyplace
 </h1>
 <h2>
-<img border="1" src="/images/pulpit.jpg" style="float:right"
-width="100" height="100">
+<img border="1" src="/home/S12/paks2/anyplace/Page_design/logo.jpg" alt=""
+     style="float:right" width="200" height="130">
+
 </h2>
 
 <head>
@@ -64,16 +65,14 @@ Password: <input type="password" name="password">
 
 </td>
 <td>
-<div id="container">
-<img class="first" src="/home/S12/paks2/anyplace/photo1.jpg" alt=""
+<img class="first" src="/home/S12/paks2/anyplace/Page_design/photo1.jpg" alt=""
      hieght="250" width="304">
-<img border="0" src="/home/S12/paks2/anyplace/photo2.jpg" alt=""
+<img border="0" src="/home/S12/paks2/anyplace/Page_design/photo2.jpg" alt=""
      hieght="250" width="304">
-<img border="0" src="/home/S12/paks2/anyplace/photo3.jpg" alt=""
+<img border="0" src="/home/S12/paks2/anyplace/Page_design/photo3.jpg" alt=""
      hieght="250" width="304">
-<img border="0" src="/home/S12/paks2/anyplace/photo4.jpg" alt=""
-     hieght="250" width="304">
-</div>
+<img border="0" src="/home/S12/paks2/anyplace/Page_design/photo4.jpg" alt=""
+     hieght="250" width="304">      
 
 </td>
 </tr> 

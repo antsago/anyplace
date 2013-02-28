@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color: dodgerblue;">
+<body background="lightblue.jpg">
 
 <head>
 
@@ -36,9 +36,9 @@ width="100" height="100">
 
 <footer>
 <nav>
-<a class="foot" href="">
+<a class="foot" href="contactUs.html">
 <strong>Contact Us</strong></a>
-<a class="foot" href="">
+<a class="foot" href="aboutUs.html">
 <strong>About Us</strong></a>
 <a class="foot" href="">
 <strong>link C</strong></a>
