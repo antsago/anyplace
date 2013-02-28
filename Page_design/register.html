@@ -39,25 +39,62 @@
     <div class="line"><label for="dob">Gender:</label><br>
     <input type="radio" name="sex" value="male">Male
     <input type="radio" name="sex" value="female">Female
+    
     <div class="line"><label for="dob">Date of Birth: </label><br>
-   
     <input type="text" id="dob" /></div>
-  
     <div class="line"><label for="email">Email: </label>
     <input type="email" id="email" /></div>
-    <div class="line"><label for="tel">Telephone: </label>
-    <input type="text" id="tel" /></div>
-    <div class="line"><label for="add">University: </label>
-    <input type="text" id="add" /></div>
-    <div class="line"><label for="ptc">Grade: </label>
-    <input type="text" id="ptc" /></div>
-    <div class="line submit"><br>
-    <input type="submit" value="Register" href="home.html"></div>
+    <div class="line"><label for="tel">Nationality: </label>
+    <input type="text" id="tel" /></div><br>
+    <form method="link" action="home.html">
+    <input type="submit" value="register"></div>
     </center>
     
  <p>Note: Please make sure your details are correct before submitting the form.</p>
  
+ 
+ 
  </form>
 </div>
+<form action="registerInput.php" method="post">
+  Name: <input type="text" name="Name" autofocus/> <br>
+  Surname: <input type="text" name="Surname"/> <br>
+  <!--email will be computed in future versions-->
+  Email: <input type="email" name="Email"/> <br>
+  Password <input type="password" name="Password"/> <br>
+  <select name="UniversityID">
+   <?php
+      //connect database
+      require('connectToDatabase.php');
+      
+      $result =mysql_query("SELECT UniversityID, UnivName FROM Universities");
+      
+      echo "<option selected disabled> Choose your University </option>";
+      while ($row=mysql_fetch_assoc($result))
+      {
+	echo "<option value=".$row['UniversityID'].">".$row['UnivName']."</option>";
+      }//while
+    ?>
+  </select> <br>
+  Age: <input type="number" name="age"/> <br>
+  <input type="radio" name="gender" value="male">Male   
+  <input type="radio" name="gender" value="female">Female<br>
+  <select name="countryID"> 
+    <?php
+      $result =mysql_query("SELECT CountryID, Name FROM Countries");
+      
+      echo "<option selected disabled> Choose your country </option>";
+      while ($row=mysql_fetch_assoc($result))
+      {
+	echo "<option value=".$row['CountryID'].">".$row['Name']."</option>";
+      }//while
+      
+      //close connection (still no in github)
+    ?>
+  </select> <br>
+<input type="submit"/>
+</form>
+
+
 </body>
 </html>
