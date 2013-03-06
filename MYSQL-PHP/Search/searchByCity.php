@@ -9,7 +9,7 @@
 
   require 'connectToDatabase.php';
 
-  if ($cityID < 1)
+  if ($cityID == null)
   {
     echo "Please select a city!!";
   } // if
