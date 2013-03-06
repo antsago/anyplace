@@ -19,8 +19,10 @@ Choose what your results should look like: <br>
 <input type="submit"/>
 </form>
 <br><br><br>
+
+
 Search for places in specified country:
-<form action="searchByCountry" method="post">
+<form action="searchByCountry.php" method="post">
 <select name="countryID">
 <?php
   //connect database
@@ -41,9 +43,12 @@ Family: <input type="checkbox" name="family"/> <br>
 Sports: <input type="checkbox" name="sports"/> <br>
 Natural: <input type="checkbox" name="natural"/> <br>
 <input type="submit"/>
+</form>
 <br><br><br>
+
+
 Search for places in specified city:
-<form action="searchByCountry" method="post"> <br>
+<form action="searchByCity.php" method="post">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 $(document).ready(function()
