@@ -7,29 +7,35 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <meta charset="utf-8">
 <h3>
-City
+Disclaimer
 </h3>
-<h2>
-<img border="0" src="/home/S12/paks2/anyplace/Page_design/finallogo.jpg" alt=""
-     style="float:right" width="200" height="150">
-</h2>
+
 
 <head>
 
 <header>
+<table border="0">
 <div>
+<tr>
+<td>
 <a class="now"  href="home.html">
-<img border="0" src="/home/S12/paks2/anyplace/Page_design/finallogo.jpg"
-     width="200" height="150"></a>
+<img src="/home/S12/paks2/anyplace/Final/logo.png"
+     width="200" height="100"></a>     
+</td><td >
+
 <a class="list" href="search.html">
-<img border="0" src="/home/S12/paks2/anyplace/Page_design/cloud.jpg">
-<strong>Search</strong></a>
+<img border="0" src="/home/S12/paks2/anyplace/Final/Search.png"
+     width="200" height="100"></a>
+</td><td>
+
 <a class="list" href="hosting.html">
-<img border="0" src="/home/S12/paks2/anyplace/Page_design/cloud.jpg">
-<strong>Hosting</strong></a>
+<img border="0" src="/home/S12/paks2/anyplace/Final/Hosting.png"
+     width="200" height="100"></a>
+</a>
+</td>
+</tr>
 </div>
 </header>
-
 
 
 

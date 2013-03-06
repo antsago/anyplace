@@ -9,41 +9,73 @@
 <h1>
 @nyplace
 </h1>
-<h2>
-<img border="0" src="/home/S12/paks2/anyplace/Page_design/finallogo.jpg"
-     width="200" height="150">
 
-</h2>
+<table border="1" style="float: right;">
+  <tr>
+   <td rowspan ="2"> 
+   <img src="./logo.png"
+     width="200" height="100">
+   </td>
+   <td> efefef</td>
+   </tr>
+   <tr>
+     <td>fdfdf</td>
+  </tr>
+</table>
 
-<head>
 
 <header>
+<table border="0">
 <div>
+<tr>
+<td>
 <a class="now"  href="home.html">
-<img border="0" src="/home/S12/paks2/anyplace/Page_design/finallogo.jpg"
-     width="200" height="150"></a>
+<img src="./logo.png"
+     width="200" height="100"></a>     
+</td><td >
+
 <a class="list" href="search.html">
-<img border="0" src="/home/S12/paks2/anyplace/Page_design/cloud.jpg">
-<strong>Search</strong></a>
+<img border="0" src="./Search.png"
+     width="200" height="100"></a>
+</td><td>
+
 <a class="list" href="hosting.html">
-<img border="0" src="/home/S12/paks2/anyplace/Page_design/cloud.jpg">
-<strong>Hosting</strong></a>
+<img border="0" src="./Hosting.png"
+     width="200" height="100"></a>
+</a>
+</td>
+</tr>
+</table>
 </div>
 </header>
 
 
 <table border="1">
 <tr>
-<td>
+<td width="30%">
 
 <form action="login1.php" method="post">
-  Email: <input type="email" name="Email"/> <br>
-  Password <input type="password" name="password"/> <br>
-                 <input type="submit" value="fly"/>
+<table border="0">
+<tr><td>
+  Email: 
+</td><td>
+  <input type="email" name="Email"/> <br>
+</td></tr><tr><td>
+  Password: 
+</td><td>
+<input type="password" name="password"/> <br>
+</td></tr><tr><td></td><td>
+<input style="float: right;" type="submit" value="fly"/>
+</td>
+</table>
 </form>
+
+<p>
 <right>
-<form method="link" action="register.php">
-<input type="submit" value="register">
+ Not a User? 
+<a href="http://soba.cs.man.ac.uk/~sanchea2/Page_design/register.php" 
+   > Register</a>
+</p>
 </right>
 </form>
 
@@ -83,7 +115,7 @@ photo updates~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <strong>Contact Us</strong></a>
 <a class="foot" href="aboutUs.html">
 <strong>About Us</strong></a>
-<a class="foot" href="">
+<a class="foot" href="disclaimer.html">
 <strong>Disclaimer</strong></a>
 </nav>
 </footer>
