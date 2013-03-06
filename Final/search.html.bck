@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-<body background="wave_pattern.jpg">
+<body background="lightblue.jpg">
 
 <head>
 
 <link rel="stylesheet" type="text/css" href="style.css">
 <meta charset="utf-8">
 <h3>
-Contact Us
+City
 </h3>
-
+<h2>
+<img border="0" src="/home/S12/paks2/anyplace/Page_design/finallogo.jpg" alt=""
+     style="float:right" width="200" height="150">
+</h2>
 
 <head>
 
@@ -30,14 +33,13 @@ Contact Us
 
 
 
-
 <footer>
 <nav>
 <a class="foot" href="contactUs.html">
 <strong>Contact Us</strong></a>
 <a class="foot" href="aboutUs.html">
 <strong>About Us</strong></a>
-<a class="foot" href="disclaimer.html">
+<a class="foot" href="">
 <strong>Disclaimer</strong></a>
 </nav>
 </footer>
