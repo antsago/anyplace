@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start();?>
 <html>
 <body background="lightblue.jpg">
 
@@ -9,20 +10,23 @@
 <h1>
 @nyplace
 </h1>
+<?php
 
-<table border="1" style="float: right;">
+if  (isset($_SESSION['name']))
+{ echo '<table border="1" style="float: right;">
   <tr>
    <td rowspan ="2"> 
    <img src="./logo.png"
      width="200" height="100">
    </td>
-   <td> Username:</td>
+   <td>'. $_SESSION["name"].':</td>
    </tr>
    <tr>
      <td>log out</td>
   </tr>
-</table>
-
+</table>';
+}//if
+?>
 
 <header>
 <table border="0">
@@ -52,7 +56,7 @@
 
 <table border="1">
 <tr>
-<td width="30%">
+<?php if  (!isset($_SESSION['name'])){echo '<td width="30%">
 
 <form action="login1.php" method="post">
 <table border="0">
@@ -81,7 +85,8 @@
 
 
 
-</td>
+</td>';}//else 
+?>
 <td>
 <marquee behavior="scroll" direction="left">
 

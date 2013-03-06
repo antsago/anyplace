@@ -1,4 +1,7 @@
 <?php 
+error_reporting(E_ALL);
+ini_set('display_errors','On');
+
 require 'connectToDatabase.php';
 $email = $_POST['Email'];
 $password = $_POST['password'];
@@ -25,13 +28,16 @@ else
   {
      echo "correct login";
       session_start();
-      $_SESSION['name'] = mysql_query("SELECT Name FROM Users WHERE Email ='$User'");
-      $_SESSION['surname'] = mysql_query("SELECT Surname FROM Users WHERE Email ='$User'");
-      $_SESSION['email'] = $User;
-      $_SESSION['uni'] = mysql_query("SELECT UniversityID FROM Users WHERE Email ='$User'");   
-      $_SESSION['age'] = mysql_query("SELECT Age FROM Users WHERE Email ='$User'");
-      $_SESSION['gender'] = mysql_query("SELECT Gender FROM Users WHERE Email ='$User'");
-      $_SESSION['country'] = mysql_query("SELECT CountryID FROM Users WHERE Email ='$User'");
+      $user = mysql_fetch_assoc(mysql_query("SELECT * FROM Users WHERE Email ='$email'"));
+      $_SESSION['name'] = $user['Name'];
+      $_SESSION['surname'] = $user['Surname'];
+      $_SESSION['email'] = $user['Email'];
+      $_SESSION['uni'] = $user['UniversityID'];
+      $_SESSION['age'] = $user['Age'];
+      $_SESSION['gender'] = $user['Gender'];
+      $_SESSION['country'] = $user['CountryID'];
+      header("Location: home.php");
+     
   } // else
 }
 ?>
