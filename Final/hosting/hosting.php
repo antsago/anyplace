@@ -56,11 +56,11 @@ if  (isset($_SESSION['name']))
 
 <footer>
 <nav>
-<a class="foot" href="../textOnly/contactUs.html">
+<a class="foot" href="../textOnly/contactUs.php">
 <strong>Contact Us</strong></a>
-<a class="foot" href="../textOnly/aboutUs.html">
+<a class="foot" href="../textOnly/aboutUs.php">
 <strong>About Us</strong></a>
-<a class="foot" href="../textOnly/disclaimer.html">
+<a class="foot" href="../textOnly/disclaimer.php">
 <strong>Disclaimer</strong></a>
 </nav>
 </footer>

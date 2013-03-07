@@ -54,70 +54,14 @@ if  (isset($_SESSION['name']))
 </header>
 
 
-<footer>
-<nav>
-<a class="foot" href="../textOnly/contactUs.html">
-<strong>Contact Us</strong></a>
-<a class="foot" href="../textOnly/aboutUs.html">
-<strong>About Us</strong></a>
-<a class="foot" href="../textOnly/disclaimer.html">
-<strong>Disclaimer</strong></a>
-</nav>
-</footer>
-
-
-
-</body>
-</html>
-
-<html>
-<body background="wave_pattern.jpg">
-
-<head>
-
-<link rel="stylesheet" type="text/css" href="style.css">
-<meta charset="utf-8">
-<h3>
-Contact Us
-</h3>
-
-
-<head>
-
-<header>
-<table border="0">
-<div>
-<tr>
-<td>
-<a class="now"  href="home.html">
-<img src="/home/S12/paks2/anyplace/Final/logo.png"
-     width="200" height="100"></a>     
-</td><td >
-
-<a class="list" href="search.html">
-<img border="0" src="/home/S12/paks2/anyplace/Final/Search.png"
-     width="200" height="100"></a>
-</td><td>
-
-<a class="list" href="hosting.html">
-<img border="0" src="/home/S12/paks2/anyplace/Final/Hosting.png"
-     width="200" height="100"></a>
-</a>
-</td>
-</tr>
-</div>
-</table>
-</header>
-
-
 
 <footer>
 <nav>
-<a class="foot" href="contactUs.html">
+<a class="foot" href="../textOnly/contactUs.php">
 <strong>Contact Us</strong></a>
-<a class="foot" href="aboutUs.html">
+<a class="foot" href="../textOnly/aboutUs.php">
 <strong>About Us</strong></a>
-<a class="foot" href="disclaimer.html">
+<a class="foot" href="../textOnly/disclaimer.php">
 <strong>Disclaimer</strong></a>
 </nav>
 </footer>
