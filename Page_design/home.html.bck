@@ -21,7 +21,9 @@
 
 <header>
 <div>
-<a class="now"  href="home.html">
+<a class="now"  href="register.html">
+<img border="0" src="/home/S12/paks2/anyplace/Page_design/finallogo.jpg" alt=""
+     width="200" height="150">
 <strong>Home</strong></a>
 <a class="list" href="city.html">
 <strong>City</strong></a>
@@ -83,7 +85,7 @@ Password: <input type="password" name="password">
 <table border="1">  
 <tr>
 <td>
-orums updates~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+forums updates~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 </td>
 <td>
 photo updates~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
