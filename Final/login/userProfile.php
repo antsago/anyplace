@@ -59,9 +59,9 @@ if  (isset($_SESSION['name']))
 <div>
 <br>
 <form action="changeUserDetails.php" method="post">
-Name: <input type="text" name="name" value="<?php $_SESSION['name'] ?>"/> <br>
-Surname: <input type="text" name="surname" value="<?php $_SESSION['surname'] ?>"/> <br>
-Age: <input type="text" name="age" value="<?php $_SESSION['age'] ?>"/> <br>
+Name: <input type="text" name="name" value="<?php echo $_SESSION['name'] ?>"/> <br>
+Surname: <input type="text" name="surname" value="<?php echo $_SESSION['surname'] ?>"/> <br>
+Age: <input type="text" name="age" value="<?php echo $_SESSION['age'] ?>"/> <br>
 <?php 
   if ($_SESSION['gender'] == "male")
   {
@@ -78,7 +78,7 @@ Country:
 <select name="countryID">
 <?php
   //connect database
-  require('connectToDatabase.php');
+  require('../connectToDatabase.php');
 
   $result =mysql_query("SELECT CountryID, Name FROM Countries");
   while ($row=mysql_fetch_assoc($result))
@@ -91,7 +91,7 @@ Country:
   require('closeConnection.php');
 ?>
 </select>
-<input type="submit"/>
+ <input type="submit" value="Submit">
 </form>
 
 <footer>
