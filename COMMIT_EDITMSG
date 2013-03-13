@@ -1,0 +1,64 @@
+Reorganized Final and smooth implementation
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: Antonio Javier Sanchez Gomez <sanchea2@rs0.(none)>
+#
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	deleted:    Final/aboutUs.html
+#	deleted:    Final/city.html.bck
+#	deleted:    Final/contactUs.html
+#	deleted:    Final/contactUs.html.bck
+#	deleted:    Final/country.html.bck
+#	deleted:    Final/disclaimer.html.bck
+#	renamed:    Final/home.html.bck -> Final/home.php
+#	deleted:    Final/hosting.html.bck
+#	renamed:    Final/hosting.html -> Final/hosting/hosting.html
+#	new file:   Final/hosting/hosting.php
+#	renamed:    Final/Hosting.png -> Final/images/Hosting.png
+#	renamed:    Final/Search.png -> Final/images/Search.png
+#	renamed:    Final/blue_white.jpg -> Final/images/blue_white.jpg
+#	renamed:    Final/cloud.jpg -> Final/images/cloud.jpg
+#	renamed:    Final/finallogo.jpg -> Final/images/finallogo.jpg
+#	renamed:    Final/green_pattern.jpg -> Final/images/green_pattern.jpg
+#	renamed:    Final/lightblue.jpg -> Final/images/lightblue.jpg
+#	renamed:    Final/logo..png -> Final/images/logo..png
+#	renamed:    Final/logo.jpg -> Final/images/logo.jpg
+#	renamed:    Final/logo.png -> Final/images/logo.png
+#	renamed:    Final/logo1.jpg -> Final/images/logo1.jpg
+#	renamed:    Final/logo1.png -> Final/images/logo1.png
+#	renamed:    Final/photo1.jpg -> Final/images/photo1.jpg
+#	renamed:    Final/photo2.jpg -> Final/images/photo2.jpg
+#	renamed:    Final/photo3.jpg -> Final/images/photo3.jpg
+#	renamed:    Final/photo4.jpg -> Final/images/photo4.jpg
+#	renamed:    Final/poster.jpg -> Final/images/poster.jpg
+#	renamed:    Final/pulpit.jpg -> Final/images/pulpit.jpg
+#	renamed:    Final/wave_pattern.jpg -> Final/images/wave_pattern.jpg
+#	renamed:    Final/login.php -> Final/login/login1.php
+#	new file:   Final/login/logout.php
+#	renamed:    Final/register.php -> Final/login/register.php
+#	renamed:    Final/register1.php -> Final/login/register1.php
+#	deleted:    Final/poster1.pdf
+#	deleted:    Final/register.html.bck
+#	deleted:    Final/search.html
+#	deleted:    Final/search.html.bck
+#	new file:   Final/search/search.php
+#	deleted:    Final/style.css.bck
+#	renamed:    Final/aboutUs.html.bck -> Final/textOnly/aboutUs.php
+#	new file:   Final/textOnly/contactUs.php
+#	renamed:    Final/disclaimer.html -> Final/textOnly/disclaimer.php
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   MYSQL-PHP/Users/login.php
+#	modified:   MYSQL-PHP/Users/loginForm.php
+#	modified:   MYSQL-PHP/Users/registerInput.php
+#	modified:   MYSQL-PHP/Users/universityInput.php
+#	modified:   Page_design/home.html
+#	modified:   Page_design/home.html.bck
+#

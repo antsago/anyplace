@@ -1,41 +1,57 @@
 <!DOCTYPE html>
+<?php session_start();?>
 <html>
-<body background="wave_pattern.jpg">
+<body background="../images/lightblue.jpg">
 
 <head>
 
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="../style.css">
 <meta charset="utf-8">
-<h3>
-About Us
-</h3>
+<h1>
+About us
+</h1>
+<?php
 
+if  (isset($_SESSION['name']))
+{ echo '<table border="1" style="float: right;">
+  <tr>
+   <td rowspan ="2"> 
+   <img src="./logo.png"
+     width="200" height="100">
+   </td>
+   <td>'. $_SESSION["name"].'</td>
+   </tr>
+   <tr>
+     <td><a href="../login/logout.php">logout</a></td>
+  </tr>
+</table>';
+}//if
+?>
 
 <header>
 <table border="0">
 <div>
 <tr>
 <td>
-<a class="now"  href="home.html">
-<img src="/home/S12/paks2/anyplace/Final/logo.png"
+<a class="now"  href="../home.php">
+<img src="../images/logo.png"
      width="200" height="100"></a>     
 </td><td >
 
-<a class="list" href="search.html">
-<img border="0" src="/home/S12/paks2/anyplace/Final/Search.png"
+<a class="list" href="../search/search.php">
+<img border="0" src="../images/Search.png"
      width="200" height="100"></a>
 </td><td>
 
-<a class="list" href="hosting.html">
-<img border="0" src="/home/S12/paks2/anyplace/Final/Hosting.png"
+<a class="list" href="../hosting/hosting.php">
+<img border="0" src="../images/Hosting.png"
      width="200" height="100"></a>
 </a>
 </td>
 </tr>
+</table>
 </div>
 </header>
-
-
 <hr>
 <h4>
 About the webpage
@@ -78,14 +94,15 @@ Staff
 <img border="1" src="/home/S12/paks2/anyplace/Page_design/poster.jpg" alt=""
      width="200" height="150">
      
-     
+
+
 <footer>
 <nav>
-<a class="foot" href="contactUs.html">
+<a class="foot" href="../textOnly/contactUs.php">
 <strong>Contact Us</strong></a>
-<a class="foot" href="aboutUs.html">
+<a class="foot" href="../textOnly/aboutUs.php">
 <strong>About Us</strong></a>
-<a class="foot" href="disclaimer.html">
+<a class="foot" href="../textOnly/disclaimer.php">
 <strong>Disclaimer</strong></a>
 </nav>
 </footer>

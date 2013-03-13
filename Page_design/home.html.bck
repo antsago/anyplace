@@ -10,7 +10,7 @@
 @nyplace
 </h1>
 <h2>
-<img border="0" src="/home/S12/paks2/anyplace/Page_design/finallogo.jpg" alt=""
+<img border="0" src="finallogo.jpg" alt=""
      style="float:right" width="200" height="150">
 
 </h2>
@@ -21,10 +21,19 @@
 
 <header>
 <div>
+<<<<<<< HEAD
 <a class="now"  href="register.html">
 <img border="0" src="/home/S12/paks2/anyplace/Page_design/finallogo.jpg" alt=""
      width="200" height="150">
+=======
+<table border="1"  background='finallogo.jpg'>
+<tr>
+<td>
+<a class="now"  href="home.html">
+>>>>>>> 0e4bc7d5597ee1c2ccab47cd6d435fe1d4517bfb
 <strong>Home</strong></a>
+</td>
+</tr>
 <a class="list" href="city.html">
 <strong>City</strong></a>
 <a class="list" href="country.html">

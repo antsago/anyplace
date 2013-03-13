@@ -1,23 +1,26 @@
 <?php
+  error_reporting(E_ALL);
+ini_set('display_errors','On');
+
+  //connect database
+  require('connectToDatabase.php');
   
-  $name = mysql_real_escape_string($_POST["Name"]);
-  $surname = mysql_real_escape_string($_POST["Surname"]);
-  $Password = mysql_real_escape_string($_POST["Password"]);
+  $name = mysql_real_escape_string($_POST["Name"], $con);
+  $surname = mysql_real_escape_string($_POST["Surname"], $con);
+  $Password = mysql_real_escape_string($_POST["Password"], $con);
   $email = $_POST['Email'];
   $uniID = $_POST['UniversityID'];
   $age = $_POST['age'];
   $gender = $_POST['gender'];
   $countryID = $_POST["countryID"];
   
-  //connect database
-  require('connectToDatabase.php');
-  
-  if (userIsNew($Email))
+  if (userIsNew($email))
   {
     $Hash = create_hash($Password);
     
-    mysql_query("INSERT INTO Users (Name, Surname, Hash, Email, UniversityID, Age, Gender, CountryID) VALUES ('$name', '$surname', '$Hash', '$email', '$uniID', '$age', '$gender', '$countryID)") 
+    mysql_query("INSERT INTO Users (Name, Surname, Hash, Email, UniversityID, Age, Gender, CountryID) VALUES ('$name', '$surname', '$Hash', '$email', '$uniID', '$age', '$gender', '$countryID')") 
       or die('Problem inserting into database: '.mysql_error());
+  echo "User added";
   }else echo "The user already exits";
   
   
@@ -27,18 +30,18 @@
   function userIsNew($Email)
   {
     //fetch list of emails
-    $allEmails = mysql_query("SELECT Email FROM Users")
+    $allEmails = mysql_query("SELECT * FROM Users")
                       or die('Problem getting users list:'
                              .mysql_error());
     //browse that list until entry found
-    while ($oldEmail = mysql_fetch_field($allEmails))
+    while ($oldEmail = mysql_fetch_array($allEmails))
     {
-      if ($Email = $oldEmail){return false;}
+      if ($Email == $oldEmail['Email']){return false;}
     }//while
     
     //if it has reach this point, no entry has been found
     return true;
-  }//universityIsNew
+  }//userIsNew
   
   //Hashing and salting, obtained: 
   //http://crackstation.net/hashing-security.htm#phpsourcecode
@@ -49,7 +52,8 @@
    * www: https://defuse.ca/php-pbkdf2.htm
    */
 
-  // These constants may be changed without breaking existing hashes.
+  function create_hash($password)
+  {  // These constants may be changed without breaking existing hashes.
   define("PBKDF2_HASH_ALGORITHM", "sha256");
   define("PBKDF2_ITERATIONS", 1000);
   define("PBKDF2_SALT_BYTES", 24);
@@ -61,8 +65,8 @@
   define("HASH_SALT_INDEX", 2);
   define("HASH_PBKDF2_INDEX", 3);
 
-  function create_hash($password)
-  {
+
+
     // format: algorithm:iterations:salt:hash
     $salt = base64_encode(mcrypt_create_iv(PBKDF2_SALT_BYTES, MCRYPT_DEV_URANDOM));
     return PBKDF2_HASH_ALGORITHM . ":" . PBKDF2_ITERATIONS . ":" .  $salt . ":" .
