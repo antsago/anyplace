@@ -19,7 +19,7 @@ if  (isset($_SESSION['name']))
    <img src="./logo.png"
      width="200" height="100">
    </td>
-   <td>'. $_SESSION["name"].'</td>
+   <td><a src="../login/userProfile.php">'. $_SESSION["name"].'</a></td>
    </tr>
    <tr>
      <td><a href="../login/logout.php">logout</a></td>
@@ -59,7 +59,7 @@ if  (isset($_SESSION['name']))
 
   $cityID = $_POST["cityID"]; 
 
-  require 'connectToDatabase.php';
+  require '../connectToDatabase.php';
 
   if ($cityID == null)
   {
@@ -78,7 +78,7 @@ if  (isset($_SESSION['name']))
       echo $row['Name']."<br>".$row['Description']."<br>";
     } // while
 
-  require 'closeConnection.php';
+  require '../closeConnection.php';
 ?>
 
 <footer>

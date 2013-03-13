@@ -18,7 +18,7 @@ if  (isset($_SESSION['name']))
    <img src="./logo.png"
      width="200" height="100">
    </td>
-   <td>'. $_SESSION["name"].'</td>
+   <td><a src="../login/userProfile.php">'. $_SESSION["name"].'</a></td>
    </tr>
    <tr>
      <td><a href="../login/logout.php">logout</a></td>
