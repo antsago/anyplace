@@ -46,6 +46,8 @@
 </div>
 </header>
 </head>
+
+
 <body style="background-color: dodgerblue;">
 <div id="container">
   <form action="register1.php" method="post">
@@ -115,5 +117,6 @@
 <strong>Disclaimer</strong></a>
 </nav>
 </footer>
+
 </body>
 </html>

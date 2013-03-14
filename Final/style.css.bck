@@ -17,7 +17,7 @@ header {
 	max-width: 100%;
 	width: auto;
 	height: 30%;
-	background: #6c2dc7; 
+	/*background: #6c2dc7; */
 	clear: both;
 }
 

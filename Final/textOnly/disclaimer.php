@@ -3,8 +3,6 @@
 <html>
 <body background="../images/lightblue.jpg">
 
-<head>
-
 <link rel="stylesheet" type="text/css" href="../style.css">
 <meta charset="utf-8">
 <h1>
@@ -52,6 +50,11 @@ if  (isset($_SESSION['name']))
 </table>
 </div>
 </header>
+
+
+<p>
+dalkdfj;alienf;lzksdnfalskdf
+</p>
 
 
 <footer>
