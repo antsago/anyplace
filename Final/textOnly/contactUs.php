@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php session_start();?>
 <html>
-<body background="../images/lightblue.jpg">
+<body background="../images/wave_pattern.jpg">
 
 <head>
 
@@ -19,7 +19,7 @@ if  (isset($_SESSION['name']))
    <img src="./logo.png"
      width="200" height="100">
    </td>
-   <td><a href="../login/userProfile.php">'. $_SESSION["name"].'</a></td>
+   <td>'. $_SESSION["name"].'</td>
    </tr>
    <tr>
      <td><a href="../login/logout.php">logout</a></td>
@@ -53,6 +53,11 @@ if  (isset($_SESSION['name']))
 </div>
 </header>
 
+<footer>
+<nav>
+&nbsp;
+</nav>
+</footer>
 
 
 <footer>

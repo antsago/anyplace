@@ -7,7 +7,7 @@
  
             #container {width:300px; margin:0 auto;}
             
-	    form label {display:inline-block; width:300px;}
+	    form label {display:inline-block; width:140px;}
  
             /* You could add a class to all the input boxes instead, if you like. That would be safer, and more backwards-compatible */
             form input[type="text"],
@@ -45,12 +45,6 @@
 </div>
 </header>
 
-<footer>
-<nav>
-&nbsp;
-</nav>
-</footer>
-
 </head>
 <body style="background-color: dodgerblue;">
 <div id="container">
@@ -77,7 +71,7 @@
     <select name="UniversityID">
      <?php
        //connect database
-       require('../connectToDatabase.php');
+       require('connectToDatabase.php');
       
        $result =mysql_query("SELECT UniversityID, UnivName FROM Universities");
       
@@ -101,19 +95,16 @@
       
       //close connection (still no in github)
     ?>
-  </select> 
-  <br><br>
+  </select> <br>
   <input type="submit" value="register"></div>
   </center>
     
- <p><b>Note:</b> Please make sure your details are correct before submitting the form.</p>
+ <p>Note: Please make sure your details are correct before submitting the form.</p>
  
  
  </form>
 
-</div>
 
-</body>
 <footer>
 <nav>
 <a class="foot" href="../textOnly/contactUs.php">
@@ -124,5 +115,6 @@
 <strong>Disclaimer</strong></a>
 </nav>
 </footer>
-
+</div>
+</body>
 </html>

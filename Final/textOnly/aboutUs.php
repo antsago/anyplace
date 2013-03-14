@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php session_start();?>
 <html>
-<body background="../images/lightblue.jpg">
+<body background="../images/wave_pattern.jpg">
 
 <head>
 
@@ -19,7 +19,7 @@ if  (isset($_SESSION['name']))
    <img src="./logo.png"
      width="200" height="100">
    </td>
-   <td><a href="../login/userProfile.php">'. $_SESSION["name"].'</a></td>
+   <td>'. $_SESSION["name"].'</td>
    </tr>
    <tr>
      <td><a href="../login/logout.php">logout</a></td>
@@ -52,13 +52,19 @@ if  (isset($_SESSION['name']))
 </table>
 </div>
 </header>
-<hr>
-<h4>
+
+<footer>
+<nav>
+&nbsp;
+</nav>
+</footer>
+
+<p1>
 About the webpage
-</h4>
+</p1>
 <hr>
 <center>
-<img border="1" src="/home/S12/paks2/anyplace/Page_design/poster.jpg" alt=""
+<img border="1" src="../images/poster.jpg"
      width="450" height="330">
 </center>    
 <p>
@@ -72,27 +78,65 @@ not miss
 
 <hr>
 
-<h4>
+
+<p1>
 Staff
-</h4>
+</p1>
 <hr>
-<img border="1" src="/home/S12/paks2/anyplace/Page_design/poster.jpg" alt=""
-     width="200" height="150">
+
+<table>
+<tr>
+<td><img border="1" src="../images/shin.jpg" 
+     width="100" height="120"></td>
+<td>
+    Shin young pak<br>
+    paks2@cs.man.ac.uk</td>
+</tr>
+</table> 
+
 <hr>
-<img border="1" src="/home/S12/paks2/anyplace/Page_design/poster.jpg" alt=""
-     width="200" height="150">  
+<table>
+<tr>
+<td><img border="1" src="../images/irina.jpg" 
+     width="100" height="120"></td>
+<td>
+    Irina Prioteasa<br>
+    priotei2@cs.man.ac.uk</td>
+</tr>
+</table> 
+ 
 <hr> 
-<img border="1" src="/home/S12/paks2/anyplace/Page_design/poster.jpg" alt=""
-     width="200" height="150">
+<table>
+<tr>
+<td><img border="1" src="../images/savvas.jpg" 
+     width="100" height="120"></td>
+<td>
+    Savvas Ashiotis<br>
+    ashiots2@cs.man.ac.uk</td>
+</tr>
+</table> 
+
 <hr>     
-<img border="1" src="/home/S12/paks2/anyplace/Page_design/poster.jpg" alt=""
-     width="200" height="150">
+<table>
+<tr>
+<td><img border="1" src="../images/antonio.jpg" 
+     width="100" height="120"></td>
+<td>
+    Antonio J.Sanchex Gomez<br>
+    sancheza2@cs.man.ac.uk</td>
+</tr>
+</table> 
+
 <hr>     
-<img border="1" src="/home/S12/paks2/anyplace/Page_design/poster.jpg" alt=""
-     width="200" height="150">
-<hr>     
-<img border="1" src="/home/S12/paks2/anyplace/Page_design/poster.jpg" alt=""
-     width="200" height="150">
+<table>
+<tr>
+<td><img border="1" src="../images/sakina.jpg" 
+     width="100" height="120"></td>
+<td>
+    Sakina Valiyeva<br>
+    valiyes2@cs.man.ac.uk</td>
+</tr>
+</table> 
      
 
 

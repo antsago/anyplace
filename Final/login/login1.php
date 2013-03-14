@@ -14,7 +14,7 @@ $query = "SELECT Hash, Salt
 $result = mysql_query($query);
 if(mysql_num_rows($result) < 1) //no such user exists
 {
-  header("Location: ../wrongHome.php");
+  echo "Wrong email or password";
 }
 else
 {
@@ -22,7 +22,7 @@ else
   $hash = hash('sha256', $userData['Salt'] . hash('sha256', $password) );
   if($hash != $userData['Hash']) //incorrect password
   {
-    header("Location: ../wrongHome.php");
+    echo "Wrong email or password";
   }
   else 
   {

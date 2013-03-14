@@ -19,7 +19,7 @@ if  (isset($_SESSION['name']))
    <img src="./logo.png"
      width="200" height="100">
    </td>
-   <td><a href="../login/userProfile.php">'. $_SESSION["name"].'</a></td>
+   <td>'. $_SESSION["name"].'</td>
    </tr>
    <tr>
      <td><a href="../login/logout.php">logout</a></td>
@@ -53,9 +53,11 @@ if  (isset($_SESSION['name']))
 </div>
 </header>
 
-
-
-
+<footer>
+<nav>
+&nbsp;
+</nav>
+</footer>
 
 <footer>
 <nav>
@@ -67,5 +69,8 @@ if  (isset($_SESSION['name']))
 <strong>Disclaimer</strong></a>
 </nav>
 </footer>
+
+
+
 </body>
 </html>

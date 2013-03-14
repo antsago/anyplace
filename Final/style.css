@@ -17,7 +17,7 @@ header {
 	max-width: 100%;
 	width: auto;
 	height: 30%;
-	background: #6c2dc7; 
+	/*background: #6c2dc7; */
 	clear: both;
 }
 
@@ -48,6 +48,11 @@ h3 {    padding-left: 180px;
 	font-size: 50pt;
 	font-family: 'Berkshire Swash', sans-serif;
 	color: #C12267;
+
+}
+
+p1 {    font-family:"Times New Roman";
+        font-size:30px;
 
 }
 
