@@ -18,7 +18,7 @@ if  (isset($_SESSION['name']))
    <img src="./logo.png"
      width="200" height="100">
    </td>
-   <td><a src="../login/userProfile.php">'. $_SESSION["name"].'</a></td>
+   <td><a href="../login/userProfile.php">'. $_SESSION["name"].'</a></td>
    </tr>
    <tr>
      <td><a href="../login/logout.php">logout</a></td>
@@ -88,10 +88,10 @@ Country:
     else
       echo "<option value=".$row['CountryID'].">".$row['Name']."</option>";
   }//while
-  require('closeConnection.php');
+  require('../closeConnection.php');
 ?>
 </select>
- <input type="submit" value="Submit">
+ <input type="submit" value="Change values">
 </form>
 
 <footer>
