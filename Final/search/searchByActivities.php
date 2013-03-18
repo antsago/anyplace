@@ -56,64 +56,68 @@ if  (isset($_SESSION['name']))
 <?php
 
   require 'getCheckBoxes.php';
-
   $searchBY = $_POST["showBY"]; 
 
-  require 'connectToDatabase.php';
-
-  if ($searchBY == 1)
+  if (($sightseeing == 0) && ($nightlife == 0) && ($family == 0) && ($sports == 0) && ($natural == 0))
   {
-    echo "Please select how to present your results!!";
-  } // if
-
-  else if ($searchBY == "country")
+    header ("Location: searchFormNoCheckbox.php");
+  }
+  else if ($searchBY == null)
   {
-    $query = "SELECT DISTINCT CountryID FROM Places WHERE Sightseeing='$sightseeing' AND
-                             Nightlife='$nightlife' AND Family_Vacation='$family' AND
-                              Sports='$sports' AND Natural_Life='$natural'";
-    $result = mysql_query($query);
+    header ("Location: searchFormNoDropdown.php");
+  }
+  else
+  {
+    require 'connectToDatabase.php';
 
-    while ($row = mysql_fetch_array($result))
+    if ($searchBY == "country")
     {
-      $countryQuery = mysql_query("SELECT Name, Description FROM Countries WHERE CountryID=$row[CountryID]");
-      $resultCountry = mysql_fetch_assoc($countryQuery);
-      echo $resultCountry['Name']."<br>".$resultCountry['Description']."<br>";
-    } // while
+      $query = "SELECT DISTINCT CountryID FROM Places WHERE Sightseeing='$sightseeing' AND
+                               Nightlife='$nightlife' AND Family_Vacation='$family' AND
+                                Sports='$sports' AND Natural_Life='$natural'";
+      $result = mysql_query($query);
 
-  } // else-if
+      while ($row = mysql_fetch_array($result))
+      {
+        $countryQuery = mysql_query("SELECT Name, Description FROM Countries WHERE CountryID=$row[CountryID]");
+        $resultCountry = mysql_fetch_assoc($countryQuery);
+        echo "<div><h10>".$resultCountry['Name']."</h10><br><br><p10>".$resultCountry['Description']."</p10></div><br><br><br>";
+      } // while
 
-  else if ($searchBY == "city")
-  {
-    $query = "SELECT DISTINCT CityID FROM Places WHERE Sightseeing='$sightseeing' AND
-                             Nightlife='$nightlife' AND Family_Vacation='$family' AND
-                              Sports='$sports' AND Natural_Life='$natural'";
-    $result = mysql_query($query);
+    } // else-if
 
-    while ($row = mysql_fetch_array($result))
+    else if ($searchBY == "city")
     {
-      $cityQuery = mysql_query("SELECT Name, Description FROM Cities WHERE CityID=$row[CityID]");
-      $resultCity = mysql_fetch_assoc($cityQuery);
-      echo $resultCity['Name']."<br>".$resultCity['Description']."<br>";
-    } // while
+      $query = "SELECT DISTINCT CityID FROM Places WHERE Sightseeing='$sightseeing' AND
+                               Nightlife='$nightlife' AND Family_Vacation='$family' AND
+                                Sports='$sports' AND Natural_Life='$natural'";
+      $result = mysql_query($query);
 
-  } // else-if
+      while ($row = mysql_fetch_array($result))
+      {
+        $cityQuery = mysql_query("SELECT Name, Description FROM Cities WHERE CityID=$row[CityID]");
+        $resultCity = mysql_fetch_assoc($cityQuery);
+        echo "<div><h10>".$resultCity['Name']."</h10><br><br><p10>".$resultCity['Description']."</p10></div><br><br><br>";
+      } // while
 
-  else if ($searchBY == "place")
-  {
-    $query = "SELECT DISTINCT PlaceID FROM Places WHERE Sightseeing='$sightseeing' AND
-                             Nightlife='$nightlife' AND Family_Vacation='$family' AND
-                              Sports='$sports' AND Natural_Life='$natural'";
-    $result = mysql_query($query);
+    } // else-if
 
-    while ($row = mysql_fetch_array($result))
+    else if ($searchBY == "place")
     {
-      $placeQuery = mysql_query("SELECT Name, Description FROM Places WHERE PlaceID=$row[PlaceID]");
-      $resultPlace = mysql_fetch_assoc($placeQuery);
-      echo $resultPlace['Name']."<br>".$resultPlace['Description']."<br>";
-    } // while
+      $query = "SELECT DISTINCT PlaceID FROM Places WHERE Sightseeing='$sightseeing' AND
+                               Nightlife='$nightlife' AND Family_Vacation='$family' AND
+                                Sports='$sports' AND Natural_Life='$natural'";
+      $result = mysql_query($query);
 
-  } // else-if
+      while ($row = mysql_fetch_array($result))
+      {
+        $placeQuery = mysql_query("SELECT Name, Description FROM Places WHERE PlaceID=$row[PlaceID]");
+        $resultPlace = mysql_fetch_assoc($placeQuery);
+        echo "<div><h10>".$resultPlace['Name']."</h10><br><br><p10>".$resultPlace['Description']."</p10></div><br><br><br>";
+      } // while
 
+    } // else-if
+  } // else
   require 'closeConnection.php';
 ?>
 

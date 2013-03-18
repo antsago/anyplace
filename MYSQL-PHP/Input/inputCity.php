@@ -4,7 +4,7 @@
 <?php
   
   //get name, description and id of country
-  $cityName = $_POST["citName"];
+  $cityName = $_POST["cityName"];
   $description = $_POST["description"];
   $countryID = $_POST["countryID"];
   

@@ -25,9 +25,9 @@ else
     $allCountries = mysql_query("SELECT Name FROM Countries")
                       or die('Problem getting country list: '.mysql_error());
     //browse that list until entry found
-    while ($requiredCountry = mysql_fetch_field($allCountries))
+    while ($requiredCountry = mysql_fetch_array($allCountries))
     {
-      if ($country == $requiredCountry)
+      if ($country == $requiredCountry['Name'])
       {return false;}
     }//while
     

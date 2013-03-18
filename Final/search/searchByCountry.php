@@ -63,8 +63,8 @@ if  (isset($_SESSION['name']))
 
   if ($countryID < 1)
   {
-    echo "Please select a country!!";
-  } // if
+    header ("Location: searchFormNoDropdown.php");
+  }
 
   $query = "SELECT Name, Description FROM Places WHERE Sightseeing='$sightseeing' AND
                     Nightlife='$nightlife' AND Family_Vacation='$family' AND
@@ -75,7 +75,7 @@ if  (isset($_SESSION['name']))
 
     while ($row = mysql_fetch_array($result))
     {
-      echo $row['Name']."<br>".$row['Description']."<br>";
+      echo "<div><h10>"$row['Name']."</h10><br><br><p10>".$row['Description']."</p10></div><br><br><br>";
     } // while
 
   require 'closeConnection.php';

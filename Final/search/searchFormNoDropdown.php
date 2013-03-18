@@ -57,6 +57,9 @@ if  (isset($_SESSION['name']))
 </nav>
 </footer>
 <br><br>
+<div10>
+Please select a value from the dropdown menus!!
+</div10>
 <div>
 <br>
 Search for places by activities:
@@ -143,11 +146,7 @@ Natural: <input type="checkbox" name="natural"/> <br>
 </select><br><br>
 <div id="getCity"></div>
 <input type="submit"/>
-<br><br>
-<div10>
-Please check at least one desirable activity!!
-</div10>
-<br><br>
+
 <footer>
 <nav>
 <a class="foot" href="../textOnly/contactUs.php">
