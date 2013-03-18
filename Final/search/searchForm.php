@@ -37,7 +37,7 @@ if  (isset($_SESSION['name']))
      width="200" height="100"></a>     
 </td><td >
 
-<a class="list" href="../search/search.php">
+<a class="list" href="../search/searchForm.php">
 <img border="0" src="../images/Search.png"
      width="200" height="100"></a>
 </td><td>
