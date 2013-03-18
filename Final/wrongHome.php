@@ -61,6 +61,9 @@ if  (isset($_SESSION['name']))
 <form action="login/login1.php" method="post">
 <table border="0">
 <tr><td>
+ <p color="red">Wrong email or password</p>
+</td></tr>
+<tr><td>
   Email: 
 </td><td>
   <input type="email" name="Email"/> <br>
@@ -77,7 +80,7 @@ if  (isset($_SESSION['name']))
 <p>
 <right>
  Not a User? 
-<a href="login/register.php"> 
+<a href="http://soba.cs.man.ac.uk/~sanchea2/Page_design/register.php"> 
 Register</a>
 </p>
 </right>

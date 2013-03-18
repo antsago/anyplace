@@ -18,7 +18,7 @@ if  (isset($_SESSION['name']))
    <img src="./logo.png"
      width="200" height="100">
    </td>
-   <td>'. $_SESSION["name"].'</td>
+   <td><a href="../login/userProfile.php">'. $_SESSION["name"].'</a></td>
    </tr>
    <tr>
      <td><a href="../login/logout.php">logout</a></td>
@@ -89,14 +89,14 @@ Natural: <input type="checkbox" name="natural"/> <br>
 <select name="countryID">
 <?php
   //connect database
-  require('connectToDatabase.php');
+  require('../connectToDatabase.php');
 
   $result =mysql_query("SELECT CountryID, Name FROM Countries");
   while ($row=mysql_fetch_assoc($result))
   {
     echo "<option value=".$row['CountryID'].">".$row['Name']."</option>";
   }//while
-  require('closeConnection.php');
+  require('../closeConnection.php');
 ?>
 <option disabled selected>Choose a Country</option>
 </select><br>

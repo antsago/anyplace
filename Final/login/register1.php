@@ -4,7 +4,7 @@ ini_set('display_errors','On');
 
 
 //retrieve our data from POST
-require 'connectToDatabase.php';
+require '../connectToDatabase.php';
 $username = $_POST['Email'];
 $pass1 = $_POST['pass1'];
 $pass2 = $_POST['pass2'];

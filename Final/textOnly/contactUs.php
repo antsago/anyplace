@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php session_start();?>
 <html>
-<body background="../images/lightblue.jpg">
+<body background="../images/wave_pattern.jpg">
 
 <head>
 
@@ -53,6 +53,11 @@ if  (isset($_SESSION['name']))
 </div>
 </header>
 
+<footer>
+<nav>
+&nbsp;
+</nav>
+</footer>
 
 
 <footer>

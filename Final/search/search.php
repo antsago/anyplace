@@ -53,9 +53,11 @@ if  (isset($_SESSION['name']))
 </div>
 </header>
 
-
-
-
+<footer>
+<nav>
+&nbsp;
+</nav>
+</footer>
 
 <footer>
 <nav>
@@ -67,5 +69,8 @@ if  (isset($_SESSION['name']))
 <strong>Disclaimer</strong></a>
 </nav>
 </footer>
+
+
+
 </body>
 </html>

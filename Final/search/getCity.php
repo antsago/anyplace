@@ -1,7 +1,7 @@
 <?php
   $requiredCountryID = $_GET['selection'];
   //connect database
-  require('connectToDatabase.php');
+  require('../connectToDatabase.php');
 
   $result =mysql_query("SELECT CityID, Name FROM Cities WHERE CountryID='$requiredCountryID'");
   

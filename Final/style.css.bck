@@ -51,31 +51,9 @@ h3 {    padding-left: 180px;
 
 }
 
-<<<<<<< HEAD
-h10 {   padding-left: 40px;
-	margin-top: 50px;
-	font-size: 25pt;
-	font-family: 'Berkshire Swash', sans-serif;
-	color: #C12267;
-}
-
-p10 {   padding-left: 40px;
-	font-size: 16pt;
-	font-family: 'Berkshire Swash', sans-serif;
-}
-
-div10 { border:2px solid #a1a1a1;
-        padding:10px 40px; 
-        margin-left: 275px;
-        background:#C12267;
-        width:300px;
-        font-weight:bold;
-        border-radius:25px;
-=======
 p1 {    font-family:"Times New Roman";
-        font-size:30px;
+        font-size:20px;
 
->>>>>>> 6caf1c516ca58763823bfdf12f5ccf7b452fb0ce
 }
 
 input[type=submit] {

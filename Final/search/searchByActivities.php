@@ -19,7 +19,7 @@ if  (isset($_SESSION['name']))
    <img src="./logo.png"
      width="200" height="100">
    </td>
-   <td>'. $_SESSION["name"].'</td>
+   <td><a href="../login/userProfile.php">'. $_SESSION["name"].'</a></td>
    </tr>
    <tr>
      <td><a href="../login/logout.php">logout</a></td>
@@ -58,7 +58,13 @@ if  (isset($_SESSION['name']))
   require 'getCheckBoxes.php';
   $searchBY = $_POST["showBY"]; 
 
+<<<<<<< HEAD
   if (($sightseeing == 0) && ($nightlife == 0) && ($family == 0) && ($sports == 0) && ($natural == 0))
+=======
+  require '../connectToDatabase.php';
+
+  if ($searchBY == 1)
+>>>>>>> 6caf1c516ca58763823bfdf12f5ccf7b452fb0ce
   {
     header ("Location: searchFormNoCheckbox.php");
   }
@@ -104,6 +110,7 @@ if  (isset($_SESSION['name']))
 
     else if ($searchBY == "place")
     {
+<<<<<<< HEAD
       $query = "SELECT DISTINCT PlaceID FROM Places WHERE Sightseeing='$sightseeing' AND
                                Nightlife='$nightlife' AND Family_Vacation='$family' AND
                                 Sports='$sports' AND Natural_Life='$natural'";
@@ -119,6 +126,16 @@ if  (isset($_SESSION['name']))
     } // else-if
   } // else
   require 'closeConnection.php';
+=======
+      $placeQuery = mysql_query("SELECT Name, Description FROM Places WHERE PlaceID=$row[PlaceID]");
+      $resultPlace = mysql_fetch_assoc($placeQuery);
+      echo $resultPlace['Name']."<br>".$resultPlace['Description']."<br>";
+    } // while
+
+  } // else-if
+
+  require '../closeConnection.php';
+>>>>>>> 6caf1c516ca58763823bfdf12f5ccf7b452fb0ce
 ?>
 
 <footer>
