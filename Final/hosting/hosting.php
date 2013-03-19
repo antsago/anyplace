@@ -52,12 +52,16 @@ if  (isset($_SESSION['name']))
 </table>
 </div>
 </header>
-<p> Hosting will be available to you later on! </p>
+
 <footer>
 <nav>
 &nbsp;
 </nav>
 </footer>
+
+<p><b><font size= "4" color="red" face="Arial">
+Hosting will be available to you later on! 
+</font></b></p>
 
 <footer>
 <nav>
