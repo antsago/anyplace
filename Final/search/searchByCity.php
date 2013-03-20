@@ -69,11 +69,7 @@ if  (isset($_SESSION['name']))
     header ("Location: searchFormNoDropdown.php");
   }
 
-  $query = "SELECT Name, Description FROM Places WHERE Sightseeing='$sightseeing' AND
-                    Nightlife='$nightlife' AND Family_Vacation='$family' AND
-                      Sports='$sports' AND Natural_Life='$natural' AND 
-                        CityID='$cityID'";
-
+  require 'query.php';
   $result = mysql_query($query);
 
     while ($row = mysql_fetch_array($result))

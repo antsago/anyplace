@@ -10,7 +10,10 @@
 Search
 </h1>
 <?php
-
+if (!isset($_SESSION['name']))
+{
+  header ("Location: searchFormNoLogin.php");
+}
 if  (isset($_SESSION['name']))
 { echo '<table border="1" style="float: right;">
   <tr>

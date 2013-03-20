@@ -72,9 +72,7 @@ if  (isset($_SESSION['name']))
 
     if ($searchBY == "country")
     {
-      $query = "SELECT DISTINCT CountryID FROM Places WHERE Sightseeing='$sightseeing' AND
-                               Nightlife='$nightlife' AND Family_Vacation='$family' AND
-                                Sports='$sports' AND Natural_Life='$natural'";
+      require 'query.php';
       $result = mysql_query($query);
 
       while ($row = mysql_fetch_array($result))
@@ -88,9 +86,7 @@ if  (isset($_SESSION['name']))
 
     else if ($searchBY == "city")
     {
-      $query = "SELECT DISTINCT CityID FROM Places WHERE Sightseeing='$sightseeing' AND
-                               Nightlife='$nightlife' AND Family_Vacation='$family' AND
-                                Sports='$sports' AND Natural_Life='$natural'";
+      require 'query.php';
       $result = mysql_query($query);
 
       while ($row = mysql_fetch_array($result))
@@ -104,9 +100,7 @@ if  (isset($_SESSION['name']))
 
     else if ($searchBY == "place")
     {
-      $query = "SELECT DISTINCT PlaceID FROM Places WHERE Sightseeing='$sightseeing' AND
-                               Nightlife='$nightlife' AND Family_Vacation='$family' AND
-                                Sports='$sports' AND Natural_Life='$natural'";
+      require 'query.php';
       $result = mysql_query($query);
 
       while ($row = mysql_fetch_array($result))

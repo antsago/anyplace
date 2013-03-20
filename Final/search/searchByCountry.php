@@ -11,7 +11,6 @@
 Search
 </h1>
 <?php
-
 if  (isset($_SESSION['name']))
 { echo '<table border="1" style="float: right;">
   <tr>
@@ -69,11 +68,7 @@ if  (isset($_SESSION['name']))
     header ("Location: searchFormNoDropdown.php");
   }
 
-  $query = "SELECT Name, Description FROM Places WHERE Sightseeing='$sightseeing' AND
-                    Nightlife='$nightlife' AND Family_Vacation='$family' AND
-                      Sports='$sports' AND Natural_Life='$natural' AND 
-                        CountryID='$countryID'";
-
+  require 'query.php';
   $result = mysql_query($query);
 
     while ($row = mysql_fetch_array($result))
