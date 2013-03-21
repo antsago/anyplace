@@ -32,7 +32,6 @@ if  (isset($_SESSION['name']))
  echo $userTable;
 }//if
 ?>
-?>
 
 <header>
 <table border="0">
