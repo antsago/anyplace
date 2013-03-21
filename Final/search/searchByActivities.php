@@ -56,11 +56,8 @@ if  (isset($_SESSION['name']))
 </table>
 </div>
 </header>
-
 <footer>
-<nav>
 &nbsp;
-</nav>
 </footer>
 
 <?php
@@ -82,6 +79,7 @@ if  (isset($_SESSION['name']))
 
     if ($searchBY == "country")
     {
+      $query = "SELECT DISTINCT CountryID FROM Places WHERE ";
       require 'query.php';
       $result = mysql_query($query);
 
@@ -96,6 +94,7 @@ if  (isset($_SESSION['name']))
 
     else if ($searchBY == "city")
     {
+      $query = "SELECT DISTINCT CityID FROM Places WHERE ";
       require 'query.php';
       $result = mysql_query($query);
 
@@ -110,6 +109,7 @@ if  (isset($_SESSION['name']))
 
     else if ($searchBY == "place")
     {
+      $query = "SELECT DISTINCT PlaceID FROM Places WHERE ";
       require 'query.php';
       $result = mysql_query($query);
 

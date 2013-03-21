@@ -54,6 +54,9 @@ if  (isset($_SESSION['name']))
 </table>
 </div>
 </header>
+<footer>
+&nbsp
+</footer>
 
 <?php
 
@@ -71,12 +74,13 @@ if  (isset($_SESSION['name']))
     header ("Location: searchFormNoDropdown.php");
   }
 
+  $query = "SELECT DISTINCT Name, Description FROM Places WHERE CountryID=$countryID AND ";
   require 'query.php';
   $result = mysql_query($query);
 
     while ($row = mysql_fetch_array($result))
     {
-      echo "<div><h10>"$row['Name']."</h10><br><br><p10>".$row['Description']."</p10></div><br><br><br>";
+      echo "<div><h10>".$row['Name']."</h10><br><br><p10>".$row['Description']."</p10></div><br><br><br>";
     } // while
 
   require '../closeConnection.php';
