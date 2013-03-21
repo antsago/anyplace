@@ -92,7 +92,7 @@ Staff
 <td><img border="1" src="../images/shin.jpg" 
      width="100" height="120"></td>
 <td>
-    Shin young pak<br>
+    Shin Young Pak<br>
     paks2@cs.man.ac.uk</td>
 </tr>
 </table> 
@@ -125,7 +125,7 @@ Staff
 <td><img border="1" src="../images/antonio.jpg" 
      width="100" height="120"></td>
 <td>
-    Antonio J.Sanchex Gomez<br>
+    Antonio J.Sanchez Gomez<br>
     sancheza2@cs.man.ac.uk</td>
 </tr>
 </table> 
