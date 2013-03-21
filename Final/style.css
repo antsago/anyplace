@@ -70,6 +70,7 @@ div10 { border:2px solid #a1a1a1;
         width:300px;
         font-weight:bold;
         border-radius:25px;
+}
 
 p1 {    font-family:"Times New Roman";
         font-size:30px;
@@ -127,7 +128,7 @@ h2.sight {
 	color: #B20D26;
 }
 
-footer{
+footer {
 	background-color: #C12267;
 	color: black;
 	clear: both;
