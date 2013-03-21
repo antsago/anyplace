@@ -63,6 +63,11 @@ p10 {   padding-left: 40px;
 	font-family: 'Berkshire Swash', sans-serif;
 }
 
+p11 {   text-align: center;
+	font-size: 16pt;
+	font-family: 'Berkshire Swash', sans-serif;
+}
+
 div10 { border:2px solid #a1a1a1;
         padding:10px 40px; 
         margin-left: 275px;
