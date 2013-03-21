@@ -78,8 +78,6 @@ if  (isset($_SESSION['name']))
   require 'query.php';
   $result = mysql_query($query);
 
-  echo $query;
-      
    if (mysql_num_rows($result) < 1)
      echo "<br><br><div10> Sorry no such places were found!!</div10><br><br><br>";
 
