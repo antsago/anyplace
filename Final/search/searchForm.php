@@ -26,7 +26,7 @@ if  (isset($_SESSION['name']))
    <td><a href="login/userProfile.php">'. $_SESSION["name"].'</a></td>
    </tr>
    <tr>
-     <td><a href="login/logout.php">logout</a></td>
+     <td><a href="../login/logout.php">logout</a></td>
   </tr>
 </table>';
  echo $userTable;

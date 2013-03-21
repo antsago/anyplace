@@ -24,7 +24,7 @@ if  (isset($_SESSION['name']))
    <td><a href="login/userProfile.php">'. $_SESSION["name"].'</a></td>
    </tr>
    <tr>
-     <td><a href="login/logout.php">logout</a></td>
+     <td><a href="../login/logout.php">logout</a></td>
   </tr>
 </table>';
  echo $userTable;
@@ -98,6 +98,9 @@ if  (isset($_SESSION['name']))
       require 'query.php';
       $result = mysql_query($query);
 
+      if (mysql_num_rows($result) < 1)
+        echo "<br><br><div10> Sorry no such places were found!!</div10><br><br><br>";
+
       while ($row = mysql_fetch_array($result))
       {
         $cityQuery = mysql_query("SELECT Name, Description FROM Cities WHERE CityID=$row[CityID]");
@@ -112,6 +115,9 @@ if  (isset($_SESSION['name']))
       $query = "SELECT DISTINCT PlaceID FROM Places WHERE ";
       require 'query.php';
       $result = mysql_query($query);
+      
+      if (mysql_num_rows($result) < 1)
+        echo "<br><br><div10> Sorry no such places were found!!</div10><br><br><br>";
 
       while ($row = mysql_fetch_array($result))
       {
