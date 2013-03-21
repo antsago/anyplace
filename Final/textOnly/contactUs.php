@@ -63,6 +63,15 @@ if  (isset($_SESSION['name']))
 </footer>
 
 
+<p>We also have a society in StudentsUnion,Travel@nyplace.</p>
+<p>You can join our society going on StudentsUnion page.</p>
+<p>For any further information,contact us:</p>
+<p>IT Manager : Savvas Ashiotis</p>
+<p>Chair : Sakina Valiyeva</p>
+<p>Treasurer : Shin Young Park</p>
+<p>International Relations Manager : Antonio Sanchez </p>
+<p>Secretary : Prioteasa Irina</p>
+
 <footer>
 <nav>
 <a class="foot" href="../textOnly/contactUs.php">
