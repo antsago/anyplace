@@ -65,25 +65,25 @@ if  (isset($_SESSION['name']))
 
 <p>
 Thank you for visiting our website and for signing up! Please read this carefully before using our website!</p>
-<p>Our policy is clear! By using our website you accept this disclaimer in full. We reserve the right to modify these terms at any time. Therefore, you,as a user,should check periodically for changes. As long as changes have been done, you agree to accept the changes by using our website, even if you have not reviewed the changes.
+<p>Our policy is clear! By using our website you accept this disclaimer in full. We reserve the right to modify these terms at any time. Therefore, you, as a user, should check periodically for any changes. As long as changes have been done, you agree to accept the changes by keep using our website, even if you have not reviewed the changes.
 
 <ol>
 <p1><b>Key contents</p1></b>
 <li>Rights to information published</li>
-<li>Website content(quality,accuracy)<br>
-Visitors who use our web page and rely on any information,do so at their own risk.<br>
-We are trying to do our best but is not warranted.</li>
+<li>Website content (quality, accuracy)<br>
+Visitors who use our web page and rely on any information, do so at their own risk.<br>
+We are trying to do our best and provide maximum reliability but it is not warranted.</li>
 <li>Restrictions on who can use the web page.<br>
 Our web page is just for students.<br>
 So, please do not sign up if you are not a student!</li>
 <li>Our right to remove or reproduce any material posted or uploaded on our page.<br>
-Please, avoid creating any fake accounts,because everything is being checked, so you will get caught!</li>
+Please, avoid creating any fake accounts, because everything is being checked, so you will get caught! :D</li>
 <li>Liability for the actions of users of our website.<br>
 You must not use our website in any unlawful, illegal, or harmful way.</li>
 <li>Limiting liability for viruses/damage.<br>
 We do not warrant that our website will work uninterrupted, without errors.<br>
-We also do not warrant that our website is free of viruses or bugs.</li>
-It is entirely your responsibility as a user,to implement procedures and check for viruses. However, we are trying to do our best!
+We also do not warrant that our website is free of viruses or bugs (although we do our most to avoid them).</li>
+It is entirely your responsibility as a user, to implement procedures, check for viruses, and use your common sense.
 </ol>
 
 </p>
