@@ -6,7 +6,12 @@
 
 #container {
      position:relative;
-     width:1225px;
+     <?php 
+       if  (isset($_SESSION['name']))
+         echo 'width:1090px;';
+       else 
+         echo 'width: 800px;';
+      ?>
      height:250px;
      overflow:hidden;
      border:none;
@@ -32,7 +37,6 @@ img {
      float:left;
  }
 </style>
-
 <script type="text/javascript">
   var m=0;
   var n=1225;
@@ -169,9 +173,9 @@ Register</a>
 </table>
 
 <p11 align="center"> Welcome <br>
-Feel free to use our existing functions (after you register!) <br>
-Hosting will be added soon <br>
-More to come later on ;-) 
+Feel free to use our existing functions. (after you register!) <br>
+Hosting will be added soon!! <br>
+More to come later on... ;-) 
 </p11>
 
 <footer>

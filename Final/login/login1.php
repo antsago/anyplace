@@ -2,11 +2,11 @@
 error_reporting(E_ALL);
 ini_set('display_errors','On');
 
-require '../connectToDatabase.php';
 $email = $_POST['Email'];
 $password = $_POST['password'];
 
 //connect to the database here
+require '../connectToDatabase.php';
 $username = mysql_real_escape_string($email);
 $query = "SELECT Hash, Salt
         FROM Users
@@ -14,7 +14,7 @@ $query = "SELECT Hash, Salt
 $result = mysql_query($query);
 if(mysql_num_rows($result) < 1) //no such user exists
 {
-  echo "Wrong email or password";
+  header ("Location: ../wrongHome.php");
 }
 else
 {
@@ -22,7 +22,7 @@ else
   $hash = hash('sha256', $userData['Salt'] . hash('sha256', $password) );
   if($hash != $userData['Hash']) //incorrect password
   {
-    echo "Wrong email or password";
+    header ("Location: ../wrongHome.php");
   }
   else 
   {
@@ -35,7 +35,7 @@ else
       $_SESSION['age'] = $user['Age'];
       $_SESSION['gender'] = $user['Gender'];
       $_SESSION['country'] = $user['CountryID'];
-      header("Location: ../home.php");
+      header("Location: ../SuccessLogin.php");
      
   } // else
 }

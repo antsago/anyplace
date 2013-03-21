@@ -1,30 +1,90 @@
 <!DOCTYPE html>
 <?php session_start();?>
 <html>
-<body background="images/lightblue.jpg">
-
 <head>
+<style type="text/css">
 
+#container {
+     position:relative;
+     <?php 
+       if  (isset($_SESSION['name']))
+         echo 'width:1090px;';
+       else 
+         echo 'width: 800px;';
+      ?>
+     height:250px;
+     overflow:hidden;
+     border:none;
+     margin:0px auto 0 auto;
+ }
+#div1 {
+     position:absolute;
+     left:0px;
+     top:0px;
+     width:1225px;
+     height:250px;
+ }
+#div2 {
+     position:absolute;
+     left:424px;
+     top:0px;
+     width:1225px;
+     height:250px;
+ }
+img {
+     border:none;
+     margin:1px;
+     float:left;
+ }
+</style>
+<script type="text/javascript">
+  var m=0;
+  var n=1225;
+  var speed=20;
+function scrollPics() {
+     document.getElementById('div1').style.left=m+'px';
+     document.getElementById('div2').style.left=n+'px';
+   m--;
+   n--;
+if(m==-1225) {
+   m=1225;
+ }
+if(n==-1225) {
+   n=1225;
+ }
+setTimeout('scrollPics()',speed);
+ } 
+window.onload=function() {
+   scrollPics();
+ }
+</script>
 <link rel="stylesheet" type="text/css" href="style.css">
 <meta charset="utf-8">
+</head>
+
+<body background="images/lightblue.jpg">
+
 <h1>
 @nyplace
 </h1>
 <?php
 
 if  (isset($_SESSION['name']))
-{ echo '<table border="1" style="float: right;">
+{ 
+  $userTable='<table border="1" style="float: right;">
   <tr>
-   <td rowspan ="2"> 
-   <img src="./logo.png"
-     width="200" height="100">
-   </td>
+   <td rowspan ="2">' ;
+
+   if  ($_SESSION['gender'] == male){ $userTable .= '<img src="images/maleProfile.jpg" width="125" height="90">';}
+   else{ $userTable .= '<img src="images/femaleProfile.jpg" width="125" height="90">';}
+   $userTable .= '</td>
    <td><a href="login/userProfile.php">'. $_SESSION["name"].'</a></td>
    </tr>
    <tr>
      <td><a href="login/logout.php">logout</a></td>
   </tr>
 </table>';
+ echo $userTable;
 }//if
 ?>
 
@@ -52,17 +112,17 @@ if  (isset($_SESSION['name']))
 </table>
 </div>
 </header>
+<footer>
+&nbsp
+</footer>
 
 
-<table border="1">
+<table border="0">
 <tr>
 <?php if  (!isset($_SESSION['name'])){echo '<td width="30%">
 
 <form action="login/login1.php" method="post">
 <table border="0">
-<tr><td>
- <p color="red">Wrong email or password</p>
-</td></tr>
 <tr><td>
   Email: 
 </td><td>
@@ -80,7 +140,7 @@ if  (isset($_SESSION['name']))
 <p>
 <right>
  Not a User? 
-<a href="http://soba.cs.man.ac.uk/~sanchea2/Page_design/register.php"> 
+<a href="login/register.php"> 
 Register</a>
 </p>
 </right>
@@ -91,31 +151,36 @@ Register</a>
 </td>';}//else 
 ?>
 <td>
-<marquee behavior="scroll" direction="left">
+<div id="container">
 
-<img border="0" src="images/photo1.jpg" alt=""
-     hieght="250" width="304">
-<img border="0" src="images/photo2.jpg" alt=""
-     hieght="250" width="304">
-<img border="0" src="images/photo3.jpg" alt=""
-     hieght="250" width="304">
-<img border="0" src="images/photo4.jpg" alt=""
-     hieght="250" width="304">      
-</marquee>
+<div id="div1">
+<img border="0" src="images/photo1.jpg" alt="">
+<img border="0" src="images/photo2.jpg" alt="">
+<img border="0" src="images/photo3.jpg" alt="">
+<img border="0" src="images/photo4.jpg" alt="">
+</div>
+
+<div id="div2">
+<img border="0" src="images/photo1.jpg" alt="">
+<img border="0" src="images/photo2.jpg" alt="">
+<img border="0" src="images/photo3.jpg" alt="">
+<img border="0" src="images/photo4.jpg" alt="">
+</div>
+
+</div>
 </td>
 </tr> 
 </table>
-
-<table border="1">  
-<tr>
-<td>
-forums updates~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-</td>
-<td>
-photo updates~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-</td>
-</tr>
-</table>
+<br>
+<div10 align="center">
+Wrong e-mail or password!! Please try again!
+</div10>
+<br>
+<p11 align="center"> Welcome <br>
+Feel free to use our existing functions. (after you register!) <br>
+Hosting will be added soon!! <br>
+More to come later on... ;-) 
+</p11>
 
 <footer>
 <nav>
@@ -127,6 +192,8 @@ photo updates~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <strong>Disclaimer</strong></a>
 </nav>
 </footer>
+
+
 
 
 

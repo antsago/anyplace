@@ -30,23 +30,46 @@ else if(strlen($username) > 30)
 
 else
 {
-$hash = hash('sha256', $pass1);
+  $hash = hash('sha256', $pass1);
 
-//creates a 3 character sequence
-function createSalt()
-{
+  //creates a 3 character sequence
+  function createSalt()
+  {
     $string = md5(uniqid(rand(), true));
     return substr($string, 0, 3);
-} // createSalt
+  } // createSalt
 
-$salt = createSalt();
-$hash = hash('sha256', $salt . $hash);
-//sanitize username
-$username = mysql_real_escape_string($username, $con);
-$query = "INSERT INTO Users (Name, Surname, Hash, Salt, Email, UniversityID, Age, Gender, CountryID) VALUES ('$name', '$surname', '$hash', '$salt', '$username', '$uniID', '$age', '$gender', '$countryID')";
-mysql_query($query);
-echo "You have been added to the database successfully!";
+  $salt = createSalt();
+  $hash = hash('sha256', $salt . $hash);
+  //sanitize username
+  $username = mysql_real_escape_string($username, $con);
+  if (userIsNew($username))
+  {
+    $query = "INSERT INTO Users (Name, Surname, Hash, Salt, Email, UniversityID, Age, Gender, CountryID) VALUES ('$name', '$surname', '$hash', '$salt', '$username', '$uniID', '$age', '$gender', '$countryID')";
+    mysql_query($query);
+    header ("Location: ../homeRegistered.php");
+  }//if
+  else
+  {
+   header ("Location: ../homeUserExists.php");
+  } // else
 } // else
+
+//Check if a user exists
+function userIsNew($username)
+{
+  //fetch list of usernames.
+  $allUsers = mysql_query("SELECT Email FROM Users")
+                      or die('Problem getting country list: '.mysql_error());
+  //browse that list until entry found
+  while ($requiredUser = mysql_fetch_array($allUsers))
+  {
+    if ($username == $requiredUser['Email'])
+      {return false;}
+  } //while    
+  //if it has reach this point, no entry has been found
+  return true;
+}//userIsNew
 mysql_close();
 ?>
 
