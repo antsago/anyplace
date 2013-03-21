@@ -20,7 +20,7 @@ if  (isset($_SESSION['name']))
    if  ($_SESSION['gender'] == male){ $userTable .= '<img src="../images/maleProfile.jpg" width="125" height="90">';}
    else{ $userTable .= '<img src="../images/femaleProfile.jpg" width="125" height="90">';}
    $userTable .= '</td>
-   <td><a href="login/userProfile.php">'. $_SESSION["name"].'</a></td>
+   <td><a href="../login/userProfile.php">'. $_SESSION["name"].'</a></td>
    </tr>
    <tr>
      <td><a href="logout.php">logout</a></td>
