@@ -71,12 +71,12 @@ About the webpage
      width="450" height="330">
 </center>    
 <p>
-Welcome ont our Website!
-This is a (holiday)website dedicated to all the students arount the world
+Welcome on to our Website!
+This is a (holiday) website dedicated to all the students around the world
 who enjoy travelling. Here, you will find information about the country you
-would like to visit. We make everything easier for you, so by the time you 
+would like to visit making everything easier for you, so by the time you 
 arrive at your desired destination, you will already know the places you should
-not miss
+not miss.
 </p>
 
 <hr>
