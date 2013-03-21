@@ -13,18 +13,21 @@ About us
 <?php
 
 if  (isset($_SESSION['name']))
-{ echo '<table border="1" style="float: right;">
+{ 
+  $userTable='<table border="1" style="float: right;">
   <tr>
-   <td rowspan ="2"> 
-   <img src="./logo.png"
-     width="200" height="100">
-   </td>
-   <td><a href="../login/userProfile.php">'. $_SESSION["name"].'</a></td>
+   <td rowspan ="2">' ;
+
+   if  ($_SESSION['gender'] == male){ $userTable .= '<img src="images/maleProfile.jpg" width="125" height="90">';}
+   else{ $userTable .= '<img src="images/femaleProfile.jpg" width="125" height="90">';}
+   $userTable .= '</td>
+   <td><a href="login/userProfile.php">'. $_SESSION["name"].'</a></td>
    </tr>
    <tr>
-     <td><a href="../login/logout.php">logout</a></td>
+     <td><a href="login/logout.php">logout</a></td>
   </tr>
 </table>';
+ echo $userTable;
 }//if
 ?>
 
