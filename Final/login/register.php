@@ -103,7 +103,7 @@
     ?>
   </select> 
   <br><br>
-  <input type="submit" value="register"></div>
+  <input type="submit" value="register" href="SuccessLogin.php"></div>
   </center>
     
  <p><b>Note:</b> Please make sure your details are correct before submitting the form.</p>
