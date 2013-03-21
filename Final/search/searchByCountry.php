@@ -74,9 +74,14 @@ if  (isset($_SESSION['name']))
     header ("Location: searchFormNoDropdown.php");
   }
 
-  $query = "SELECT DISTINCT Name, Description FROM Places WHERE CountryID=$countryID AND ";
+  $query = "SELECT DISTINCT Name, Description FROM Places WHERE CountryID='$countryID' AND ";
   require 'query.php';
   $result = mysql_query($query);
+
+  echo $query;
+      
+   if (mysql_num_rows($result) < 1)
+     echo "<br><br><div10> Sorry no such places were found!!</div10><br><br><br>";
 
     while ($row = mysql_fetch_array($result))
     {

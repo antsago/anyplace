@@ -83,6 +83,10 @@ if  (isset($_SESSION['name']))
       require 'query.php';
       $result = mysql_query($query);
 
+      
+      if (mysql_num_rows($result) < 1)
+        echo "<br><br><div10> Sorry no such places were found!!</div10><br><br><br>";
+
       while ($row = mysql_fetch_array($result))
       {
         $countryQuery = mysql_query("SELECT Name, Description FROM Countries WHERE CountryID=$row[CountryID]");
