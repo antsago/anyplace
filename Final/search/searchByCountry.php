@@ -17,8 +17,8 @@ if  (isset($_SESSION['name']))
   <tr>
    <td rowspan ="2">' ;
 
-   if  ($_SESSION['gender'] == male){ $userTable .= '<img src="images/maleProfile.jpg" width="125" height="90">';}
-   else{ $userTable .= '<img src="images/femaleProfile.jpg" width="125" height="90">';}
+   if  ($_SESSION['gender'] == male){ $userTable .= '<img src="../images/maleProfile.jpg" width="125" height="90">';}
+   else{ $userTable .= '<img src="../images/femaleProfile.jpg" width="125" height="90">';}
    $userTable .= '</td>
    <td><a href="login/userProfile.php">'. $_SESSION["name"].'</a></td>
    </tr>
