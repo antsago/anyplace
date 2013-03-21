@@ -126,7 +126,7 @@ Staff
      width="100" height="120"></td>
 <td>
     Antonio J.Sanchez Gomez<br>
-    sancheza2@cs.man.ac.uk</td>
+    sanchea2@cs.man.ac.uk</td>
 </tr>
 </table> 
 
