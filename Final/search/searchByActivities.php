@@ -31,6 +31,7 @@ if  (isset($_SESSION['name']))
 }//if
 ?>
 
+
 <header>
 <table border="0">
 <div>
@@ -55,6 +56,12 @@ if  (isset($_SESSION['name']))
 </table>
 </div>
 </header>
+
+<footer>
+<nav>
+&nbsp;
+</nav>
+</footer>
 
 <?php
 
@@ -117,6 +124,8 @@ if  (isset($_SESSION['name']))
   } // else
   require '../closeConnection.php';
 ?>
+
+
 
 <footer>
 <nav>
