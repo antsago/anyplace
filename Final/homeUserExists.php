@@ -173,7 +173,7 @@ Register</a>
 </table>
 <br>
 <div10 align="center">
-You have been logged in!
+Email already exists!! Are you sure you haven't registered already??
 </div10>
 <br>
 <p11 align="center"> Welcome <br>

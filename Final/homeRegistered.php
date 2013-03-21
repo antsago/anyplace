@@ -173,7 +173,7 @@ Register</a>
 </table>
 <br>
 <div10 align="center">
-You have been logged in!
+Welcome aboard! Please login to start using our services!!
 </div10>
 <br>
 <p11 align="center"> Welcome <br>
